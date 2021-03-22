@@ -2,13 +2,13 @@ const {getMatterTags, createMattertag, updateMattertag, deleteMattertag} = requi
 
 const createRoutes = (app) => {
 
-    app.get("Mattertags/", getMatterTags);
+    app.get("/", getMatterTags);
 
-    app.post("Mattertag/", createMattertag);
+    app.post("/", createMattertag);
 
-    app.put("Mattertag/:id", updateMattertag);
+    app.put("/:id", updateMattertag);
 
-    app.delete("Mattertag/:id", deleteMattertag);
+    app.delete("/:id", deleteMattertag);
 
 };
 
