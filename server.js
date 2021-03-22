@@ -18,7 +18,9 @@ app.use(bodyParser.json());
 app.disable('x-powered-by');
 
 //Mongoose
-mongoose.connect(env.MongoUrl, {useNewUrlParser: true, useUnifiedTopology: true});
+try{
+    mongoose.connect(env.MongoUrl, {useNewUrlParser: true, useUnifiedTopology: true});
+}catch(err){console.log(`Mongoose connect error: ${err}`);};
 
 //Init Route
 createRoutes(app);
