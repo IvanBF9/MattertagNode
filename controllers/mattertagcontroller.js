@@ -21,8 +21,7 @@ const createMattertag = (req, res, next) => {
 };
 
 const updateMattertag = (req, res, next) => {
-    const {id} = req.body.id;
-    req.body = req.body.id.replace(/\\n/g, '');
+    const {id} = req.params.id;
 
     Mattertag.findByIdAndUpdate({_id: id}, req.body)
     .then(()=>{
@@ -34,8 +33,7 @@ const updateMattertag = (req, res, next) => {
 };
 
 const deleteMattertag = (req, res, next) => {
-    const id = req.body.id;
-    req.body = req.body.id.replace(/\\n/g, '');
+    const id = req.parmas.id;
 
     Mattertag.findOneAndDelete({_id : id})
     .then((tag) => {
