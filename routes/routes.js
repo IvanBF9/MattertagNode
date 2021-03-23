@@ -6,9 +6,9 @@ const createRoutes = (app) => {
 
     app.post("/", createMattertag);
 
-    app.put("/:id", updateMattertag);
+    app.put("/", updateMattertag);
 
-    app.delete("/:id", deleteMattertag);
+    app.delete("/", deleteMattertag);
 
 };
 
