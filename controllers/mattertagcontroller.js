@@ -33,7 +33,7 @@ const updateMattertag = (req, res, next) => {
 };
 
 const deleteMattertag = (req, res, next) => {
-    const {id} = req.parmas;
+    const {id} = req.params;
 
     Mattertag.findOneAndDelete({_id : id})
     .then((tag) => {
