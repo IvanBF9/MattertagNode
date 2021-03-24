@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
 const Mattertag = mongoose.model('Mattertag', {
-    label : String,
-    description : String,//To insert url on desc []
-    color : String,//Use thhis format r:0 g:162 b:255
-    position : String,//Use this format x:1.286 y:-0.314 z:1.557
-    html : String,//Simple Html
-    medialabel : String,//label du lien src
+    Sid : String,
+    Label : String,
+    Description : String,//To insert url on desc []
+    Color : String,//Use thhis format r:0 g:162 b:255
+    Position : String,//Use this format x:1.286 y:-0.314 z:1.557
+    Html : String,//Simple Html
     mediasrc : String,//Source du media
     mediatype : String,//Types : "NONE" , "PHOTO", "RICH", "VIDEO"
 
