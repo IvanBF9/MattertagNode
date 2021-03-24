@@ -9,6 +9,14 @@ const getMatterTags = (req, res, next) => {
     .catch(next)
 };
 
+const getMattertagsBySid = (req, res, next) => {
+    Mattertag.find({Sid: req.params.sid})
+    .then((tags) => {
+      res.send(tags);
+    })
+    .catch(next);
+}
+
 const createMattertag = (req, res, next) => {
     const newMattertag = req.body;
     console.log(newMattertag);
@@ -42,4 +50,4 @@ const deleteMattertag = (req, res, next) => {
     .catch(next);
 };
 
-module.exports = {getMatterTags, createMattertag, updateMattertag, deleteMattertag};
+module.exports = {getMatterTags, getMattertagsBySid, createMattertag, updateMattertag, deleteMattertag};

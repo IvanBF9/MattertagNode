@@ -1,8 +1,10 @@
-const {getMatterTags, createMattertag, updateMattertag, deleteMattertag} = require("../controllers/mattertagcontroller");
+const {getMatterTags, getMattertagsBySid,  createMattertag, updateMattertag, deleteMattertag} = require("../controllers/mattertagcontroller");
 
 const createRoutes = (app) => {
 
     app.get("/", getMatterTags);
+
+    app.get("/:sid", getMattertagsBySid);
 
     app.post("/", createMattertag);
 
