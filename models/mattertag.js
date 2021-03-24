@@ -7,6 +7,8 @@ const Mattertag = mongoose.model('Mattertag', {
     Color : String,//Use thhis format r:0 g:162 b:255
     Position : String,//Use this format x:1.286 y:-0.314 z:1.557
     Html : String,//Simple Html
+    Width : Number,//If Html
+    Height : Number,//If Html
     Mediasrc : String,//Source du media
     Mediatype : String,//Types : "NONE" , "PHOTO", "RICH", "VIDEO"
 
